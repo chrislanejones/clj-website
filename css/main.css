@@ -44,7 +44,6 @@ PHOTO (AVATAR)
 #photo{
   width: 160px;
   height: 160px;
-
   overflow: hidden;
   padding: 5px;
   background: #35BBB5;
@@ -106,13 +105,23 @@ DEFAULT BOX
   text-transform: uppercase;
 }
 .box h2:before{
-  content: '//';
+  /*content: '//';*/
   margin-right: 5px;
 }
 .box p{
   font-size: 1.3em;
   line-height: 1.5em;
 }
+
+/*******************************************
+ABOUT
+*******************************************/
+.hicon {
+  font-size: 2em;
+  display:inline;
+  color:#3A5A75;
+}
+
 /*******************************************
 EDUCATION
 *******************************************/
