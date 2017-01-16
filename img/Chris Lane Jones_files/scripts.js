@@ -1,4 +1,4 @@
-$('.tux').popover({placement: "top"});
+$('.timezone_help').popover({placement: "top"});
 
 
 // Skills Bar
