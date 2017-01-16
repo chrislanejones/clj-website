@@ -26,10 +26,7 @@ h1,h2 {
 body{
   font-size: 1.1em;
   color: #000000;
-  background-color: #3A5A75;
-  background-image: url("../img/black-linen.png");
-
-
+  background: #3A5A75;
 }
 /*******************************************
 CONTAINER
@@ -261,25 +258,79 @@ CONTACT
 /*******************************************
 SKILLS
 *******************************************/
-.tooltip{
-  position:relative;
-  float:right;
+.item-skills{
+  height: 30px;
+  background: #3A5A75;
+  color: #fff;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.3em;
+  font-weight: 400;
 }
-.tooltip > .tooltip-inner {background-color: #35BBB5; padding:5px 15px; color:rgb(58, 90, 117); font-weight:bold; font-size:13px;}
-.popOver + .tooltip > .tooltip-arrow {	border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #35BBB5;}
-
-section{
-  margin:100px auto;
-  height:1000px;
+.skills-legend{
+  margin-top: 20px;
+  opacity: 0.8;
 }
-.progress{
-  border-radius:0;
-  overflow:visible;
+.skills-legend:before{
+  width: 100%;
+  height: 3px;
+  position: relative;
+  content: ' ';
+  display: block;
+  margin-bottom: -13px;
+  background: #c6c6c6;
 }
-.progress-bar{
-   background:rgb(58, 90, 117);
-  -webkit-transition: width 1.5s ease-in-out;
-  transition: width 1.5s ease-in-out;
+.skills-legend div{
+  width: 25%;
+  display: inline-block;
+  font-size: 1.2em;
+  color: #a9a9a9;
+  float: left;
+}
+.legend:before{
+  width: 3px;
+  height: 10px;
+  position: relative;
+  content: ' ';
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+  background: #c6c6c6;
+}
+.legend-left.legend:before{
+  margin-left: 0;
+}
+.legend-right.legend:before{
+  margin-right: 0;
+}
+.legend-left:nth-child(2) span{
+  margin-left: -25px;
+}
+.legend-right:nth-child(3) span{
+  margin-right: -20px;
+}
+.legend-right{
+  text-align: left;
+}
+/*******************************************
+LANGUAGES
+*******************************************/
+#language-skills .skill{
+  font-size: 1.3em;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+#language-skills .skill .icons{
+  width: 111px;
+  height: 14px;
+  background: url(../img/star-grey.png) no-repeat;
+}
+#language-skills .skill .icons-red{
+  background: url(../img/star-red.png) no-repeat;
 }
 /*******************************************
 HOBBIES
@@ -287,16 +338,15 @@ HOBBIES
 .hobby{
   color: #fff;
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 5px;
   margin-bottom: 5px;
-  padding: 6px 6px 6px 25px;
-  background: #3A5A75;
+  padding: 5px 5px 5px 25px;
+  background: #A75265;
   position: relative;
-  font-size: 1.4em;
-  border-radius: 25px;
+  font-size: 1.2em;
 }
 .hobby:before{
-  content: "\f1d9";
+  content: "\f004";
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
@@ -311,11 +361,9 @@ Terminal
 .shift-text {
   margin: 20px auto 110px; }
   .shift-text .text-body {
-    height: 300px; }
+    height: 420px; }
   .shift-text .tagline {
     opacity: 0.9; }
-
-
 
 /* text editor styles */
 .text-editor-wrap {
@@ -346,7 +394,7 @@ Terminal
   border-bottom: #6a6a6a 1px solid; }
 
 .text-body {
-  height: 150px;
+  height: 250px;
   background-color: rgba(0, 0, 0, 0.85);
   padding: 10px;
   color: #35BBB5;
@@ -372,7 +420,6 @@ Terminal
   -ms-animation: blink 0.7s infinite;
   -o-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite; }
-
 
 
 /*******************************************
@@ -412,18 +459,4 @@ Navbar
 }
 .navbar-brand {
 font-size: 1.1em;
-}
-
-.divider-vertical {
-height: 50px;
-margin: 0 9px;
-border-left: 1px solid #F2F2F2;
-border-right: 1px solid #FFF;
-}
-
-
-@media (min-width: 768px){
-.navbar-nav.navbar-right:last-child {
-    margin-right: 15px!important;
-}
 }
